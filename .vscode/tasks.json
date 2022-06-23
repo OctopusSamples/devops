@@ -5,7 +5,7 @@
     "tasks": [
       {
         "type": "shell",
-        "isBackground": true,        
+        "isBackground": true,
         "group": "build",
         "label": "jekyll build",
         "command": "jekyll build",
@@ -18,7 +18,7 @@
       },
       {
         "type": "shell",
-        "isBackground": true,        
+        "isBackground": true,
         "group": "serve",
         "label": "jekyll serve",
         "command": "jekyll serve",
@@ -27,7 +27,8 @@
         },
         "options": {
           "cwd": "${workspaceRoot}"
-        }
+        },
+        "problemMatcher": []
       }
     ]
   }
