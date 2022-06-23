@@ -4,5 +4,4 @@ RUN sudo install-packages ruby-full build-essential zlib1g-dev
 RUN echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 RUN echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 RUN echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-RUN sudo gem install bundler webrick
-RUN gem install jekyll
+RUN rvm_path=~/.rvm gem install bundler webrick jekyll
