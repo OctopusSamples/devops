@@ -8,7 +8,7 @@
         "isBackground": true,
         "group": "build",
         "label": "jekyll build",
-        "command": "jekyll build",
+        "command": "sudo jekyll build",
         "windows": {
           "command": "jekyll build"
         },
@@ -21,7 +21,7 @@
         "isBackground": true,
         "group": "serve",
         "label": "jekyll serve",
-        "command": "jekyll serve",
+        "command": "sudo jekyll serve",
         "windows": {
           "command": "jekyll serve"
         },
