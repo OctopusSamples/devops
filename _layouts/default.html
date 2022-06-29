@@ -2,8 +2,10 @@
 <html lang="en">
 {% include head.html %}
 <body>
+  {% if jekyll.environment == 'production' %}
+  {% include analytics_body.html %}
+  {% endif %}
   {{ content }}
   {% include javascripts.html %}
-  {% include analytics.html %}
 </body>
 </html>
