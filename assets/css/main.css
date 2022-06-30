@@ -983,7 +983,7 @@ pre code {
 }
 
 .menu-icon,
-.search-icon a,
+.search-icon,
 .search-icon-close {
   cursor: pointer;
   font-size: 18px;

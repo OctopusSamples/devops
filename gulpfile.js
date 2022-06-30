@@ -1,6 +1,4 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
@@ -21,26 +19,13 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['sass', 'img', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['img', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
         },
         notify: false
     });
-});
-
-// Compile files
-gulp.task('sass', function () {
-    return gulp.src('assets/css/sass/main.scss')
-        .pipe(sass({
-            outputStyle: 'expanded',
-            onError: browserSync.notify
-        }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('assets/css'));
 });
 
 // Compression images
@@ -58,7 +43,6 @@ gulp.task('img', function() {
 
 // Watch scss, html, img files
 gulp.task('watch', function () {
-    gulp.watch('assets/css/sass/**/*.scss', ['sass']);
     gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
     gulp.watch('assets/img/**/*', ['img']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_pages/*.html', '_posts/*'], ['jekyll-rebuild']);
