@@ -8,11 +8,6 @@
   var activeClass = 'active';
   var searchActiveClass = 'search-active';
 
-  // If elements not present, no need to continue
-  if (!searchIcon) {
-    return;
-  }
-
   function toggle(elem, className) {
     elem.classList.contains(className)
       ? elem.classList.remove(className)
@@ -42,6 +37,11 @@
       searchBox.classList.remove(searchActiveClass);
     }
   });
+
+  // If elements not present, no need to continue with search
+  if (!searchIcon) {
+    return;
+  }
 
   // Search Settings
   searchIcon.addEventListener('click', function (e) {
