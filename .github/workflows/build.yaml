@@ -12,3 +12,14 @@ jobs:
 
     - name: Build
       uses: jerryjvl/jekyll-build-action@v1
+
+    - name:
+      run: |-
+        mkdir -p _zip
+        echo; echo "Folders created:"
+        ls
+        echo; echo "Moving to _site Folder:"
+        cd _site
+        ls
+        echo; echo "Creating zip:"
+        zip -r -v ../_zip/devops.zip *
