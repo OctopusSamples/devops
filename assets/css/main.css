@@ -1783,3 +1783,19 @@ pre code {
 .ul {
   line-height: 1.5em;
 }
+
+/* Breadcrumbs */
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.breadcrumbs li::after {
+  content: ">";
+  margin: 0 10px;
+}
+
+.breadcrumbs ol li:last-child::after { 
+  content: none;
+}
