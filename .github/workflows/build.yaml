@@ -1,0 +1,14 @@
+name: Jekyll Build
+
+on:
+  push
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build
+      uses: jerryjvl/jekyll-build-action@v1
