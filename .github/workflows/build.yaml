@@ -24,6 +24,9 @@ jobs:
     #     echo; echo "Creating zip:"
     #     zip -r -v ../_zip/devops.zip *
 
+    - name: Set Version
+      run: echo "PACKAGE_VERSION=$(date +'%Y.%m.%d').$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+
     - name: Install Octopus CLI
       uses: OctopusDeploy/install-octopus-cli-action@v1.1.6
       with:
@@ -38,7 +41,7 @@ jobs:
       with:
         api_key: ${{ secrets.OCTOPUSSERVERAPIKEY }}
         server: ${{ secrets.OCTOPUSSERVERURL }}
-        packages: "artifacts/DevOpsMicrosite.${{ PACKAGE_VERSION }}.zip"
+        packages: "artifacts/DevOpsMicrosite.${{ env.PACKAGE_VERSION }}.zip"
         space: ${{ secrets.OCTOPUSSERVER_SPACE }}
 
     - name: Create and deploy release
