@@ -13,13 +13,40 @@ jobs:
     - name: Build
       uses: jerryjvl/jekyll-build-action@v1
 
-    - name:
-      run: |-
-        mkdir -p _zip
-        echo; echo "Folders created:"
-        ls
-        echo; echo "Moving to _site Folder:"
-        cd _site
-        ls
-        echo; echo "Creating zip:"
-        zip -r -v ../_zip/devops.zip *
+    # - name:
+    #   run: |-
+    #     mkdir -p _zip
+    #     echo; echo "Folders created:"
+    #     ls
+    #     echo; echo "Moving to _site Folder:"
+    #     cd _site
+    #     ls
+    #     echo; echo "Creating zip:"
+    #     zip -r -v ../_zip/devops.zip *
+
+    - name: Install Octopus CLI
+      uses: OctopusDeploy/install-octopus-cli-action@v1.1.6
+      with:
+        version: latest
+
+    - name: Package DevOps Microsite
+      run: |
+        octo pack --id="DevOpsMicrosite" --format="Zip" --version="$PACKAGE_VERSION" --basePath="$GITHUB_WORKSPACE/_site" --outFolder="$GITHUB_WORKSPACE/artifacts"
+
+    - name: Push DevOps Microsite
+      uses: OctopusDeploy/push-package-action@v1.1.1
+      with:
+        api_key: ${{ secrets.OCTOPUSSERVERAPIKEY }}
+        server: ${{ secrets.OCTOPUSSERVERURL }}
+        packages: "artifacts/DevOpsMicrosite.${{ env.PACKAGE_VERSION }}.zip"
+        space: ${{ secrets.OCTOPUSSERVER_SPACE }}
+
+    - name: Create and deploy release
+      uses: OctopusDeploy/create-release-action@v1.1.1
+      with:
+        api_key: ${{ secrets.OCTOPUSSERVERAPIKEY }}
+        server: ${{ secrets.OCTOPUSSERVERURL }}
+        space: ${{ secrets.OCTOPUSSERVER_SPACE }}
+        project: "DevOps Microsite"
+        deploy_to: "Development"
+        progress: true
