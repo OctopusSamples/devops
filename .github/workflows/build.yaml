@@ -38,7 +38,7 @@ jobs:
       with:
         api_key: ${{ secrets.OCTOPUSSERVERAPIKEY }}
         server: ${{ secrets.OCTOPUSSERVERURL }}
-        packages: "artifacts/DevOpsMicrosite.${{ env.PACKAGE_VERSION }}.zip"
+        packages: "artifacts/DevOpsMicrosite.${{ PACKAGE_VERSION }}.zip"
         space: ${{ secrets.OCTOPUSSERVER_SPACE }}
 
     - name: Create and deploy release
