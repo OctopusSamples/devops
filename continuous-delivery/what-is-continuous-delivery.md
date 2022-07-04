@@ -2,7 +2,8 @@
 layout: page
 title: What is continuous delivery
 search: true
-category: Continuous Delivery
+order: 110
+category: Continuous delivery
 description: 
 ---
 

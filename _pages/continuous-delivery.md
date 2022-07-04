@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Continuous delivery
+order: 100
 permalink: /continuous-delivery/
+category: DevOps
 ---
 
 ![image](/assets/img/blogimage-cloudformationmappings-2022.png)

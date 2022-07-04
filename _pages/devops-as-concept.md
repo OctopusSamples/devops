@@ -3,6 +3,7 @@ layout: page
 title: DevOps as a concept
 order: 20
 permalink: devops-as-a-concept
+category: DevOps
 ---
 
 ![image](/assets/img/blogimage-cloudformationmappings-2022.png)

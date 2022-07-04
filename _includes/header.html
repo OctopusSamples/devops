@@ -4,20 +4,7 @@
       <div class="menu-icon-container">
         <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
       </div>
-      <nav class="main-nav">
-        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
-        <ul>
-          <li><a href="{{ site.url }}">Home</a></li>
-          {% assign pages = site.pages | sort: "order" %}
-          {% for page in pages %}
-            {% if page.title != home %}
-              <li>
-                <a href="{{ page.url | prepend: site.baseurl }} ">{{page.title}}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
+      {% include navigation.html %}
       <img src="/assets/img/Logo-White_40px.png"><p class="logo"><a href="{{site.baseurl}}/">{{ site.title }}</a></p>
       <div class="search-icon-container">
         <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
