@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Continuous delivery
+order: 100
 permalink: /continuous-delivery/
 ---
 
