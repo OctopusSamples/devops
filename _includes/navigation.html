@@ -4,10 +4,18 @@
     <li><a href="{{ site.url }}">DevOps</a></li>
     {% assign pages = site.pages | sort: "order" %}
     {% for page in pages %}
-      {% if page.title != home %}
+      {% if page.category == "DevOps" %}
         <li>
           <a href="{{ page.url | prepend: site.baseurl }} ">{{page.title}}</a>
         </li>
+        {% for subpage in site.pages %}
+          {% if subpage.category == page.title %}
+          <li>
+            <a href="{{ page.url | prepend: site.baseurl }} ">{{subpage.title}}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+
       {% endif %}
     {% endfor %}
   </ul>
