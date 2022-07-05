@@ -19,23 +19,25 @@ layout: default
 				</a>
 				<meta itemprop="position" content="{{bc-position}}" />
 			</li>
-			{% if breadcrumb-topic.size > 1 %}
-			{% assign bc-position = bc-position | plus:1 %}
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="/{{breadcrumb-topic}}" href="{{ site.url }}/{{breadcrumb-topic}}">
-					<span itemprop="name">{{ breadcrumb-topic | replace: "-", " " | capitalize }}</span>
-				</a>
-				<meta itemprop="position" content="{{bc-position}}" />
-			</li>
-			{% endif %}
-			{% if title-size > 0 %}
-			{% assign bc-position = bc-position | plus:1 %}
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="{{ page.url | prepend: site.baseurl }}" href="{{ page.url | prepend: site.baseurl }}">
-					<span itemprop="name">{{page.title}}{{title_size}}</span>
-				</a>
-				<meta itemprop="position" content="{{bc-position}}" />
-			</li>
+      {% if page.title != 'DevOps' %}
+  			{% if breadcrumb-topic.size > 1 %}
+  			{% assign bc-position = bc-position | plus:1 %}
+  			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="/{{breadcrumb-topic}}" href="{{ site.url }}/{{breadcrumb-topic}}">
+  					<span itemprop="name">{{ breadcrumb-topic | replace: "-", " " | capitalize }}</span>
+  				</a>
+  				<meta itemprop="position" content="{{bc-position}}" />
+  			</li>
+  			{% endif %}
+  			{% if title-size > 0 %}
+  			{% assign bc-position = bc-position | plus:1 %}
+  			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="{{ page.url | prepend: site.baseurl }}" href="{{ page.url | prepend: site.baseurl }}">
+  					<span itemprop="name">{{page.title}}{{title_size}}</span>
+  				</a>
+  				<meta itemprop="position" content="{{bc-position}}" />
+  			</li>
+        {% endif %}
 			{% endif %}
 		</ol>
 	</nav>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Devops
+title: DevOps
 description: DevOps! DevOps! DevOps!
 ---
 
