@@ -58,7 +58,7 @@ Will usually be added from the page title.
 
 Level two headings follow level one headings.
 
-## Header level 3
+### Header level 3
 
 Level three headings follow level two headings.
 
