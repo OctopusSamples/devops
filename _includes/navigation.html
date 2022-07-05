@@ -11,7 +11,7 @@
         {% for subpage in site.pages %}
           {% if subpage.category == page.title %}
           <li>
-            <a href="{{ page.url | prepend: site.baseurl }} ">{{subpage.title}}</a>
+            <a href="{{ subpage.url | prepend: site.baseurl }} ">{{subpage.title}}</a>
           </li>
           {% endif %}
         {% endfor %}
