@@ -36,7 +36,9 @@ step "Run an AWS CLI Script" {
                 shopt -s expand_aliases
                 alias aws="docker run --rm -i -v $(pwd):/build -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY amazon/aws-cli"
                 
-                aws s3api head-bucket --bucket #{AWS.BucketName} 
+                aws s3api head-bucket --bucket #{AWS.BucketName}
+                
+                echo "Exit code is $?"
             EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
