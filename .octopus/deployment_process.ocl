@@ -29,3 +29,25 @@ step "Upload Microsite to AWS S3" {
         }
     }
 }
+
+step "Remove Files" {
+
+    action {
+        action_type = "Octopus.AwsRunScript"
+        is_required = true
+        properties = {
+            Octopus.Action.Aws.AssumeRole = "False"
+            Octopus.Action.Aws.Region = "#{AWS.Region}"
+            Octopus.Action.AwsAccount.UseInstanceRole = "False"
+            Octopus.Action.AwsAccount.Variable = "AWS.Account"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                aws s3api delete-object --bucket $(get_octopusvariable "AWS.BucketName") --key LICENSE
+                aws s3api delete-object --bucket $(get_octopusvariable "AWS.BucketName") --key README.md
+            EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+            OctopusUseBundledTooling = "False"
+        }
+        worker_pool_variable = ""
+    }
+}
