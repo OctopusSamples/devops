@@ -1,6 +1,23 @@
 # Octopus DevOps
 
+## Where everything is
 
+- Version control: https://github.com/OctopusSamples/devops
+- Octopus Deploy: https://tenpillars.octopus.app/app#/Spaces-128
+- AWS "product team" #133577413914 (productteamawsaccount@octopus.com)
+- AWS staging: http://octopus-devops-staging.s3-website-us-east-1.amazonaws.com/
+- AWS production: http://octopus-devops-production.s3-website-us-east-1.amazonaws.com/
+
+The content team can provide access to GitHub and Octopus Deploy.
+
+Use `#secops-requests` to request access to the AWS "product team" account.
+
+### Deployment pipeline
+
+1. Commit to GitHub
+2. GitHub action builds Jekyll site and uploads zip file to Octopus
+3. Octopus auto-deploys to staging
+4. Push-buton deployment to production
 
 ## Running Jekyll on Windows
 
