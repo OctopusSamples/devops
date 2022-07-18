@@ -2,7 +2,7 @@
 layout: page
 title: DevOps as a culture
 order: 30
-permalink: devops-as-a-culture
+permalink: /devops-as-a-culture/
 category: DevOps
 ---
 

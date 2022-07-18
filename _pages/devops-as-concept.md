@@ -2,7 +2,7 @@
 layout: page
 title: DevOps as a concept
 order: 20
-permalink: devops-as-a-concept
+permalink: /devops-as-a-concept/
 category: DevOps
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: DevOps glossary
 order: 900
-permalink: devops-glossary
+permalink: /devops-glossary/
 description: A glossary of DevOps terms
 category: DevOps
 ---
