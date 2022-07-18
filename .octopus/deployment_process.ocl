@@ -13,7 +13,7 @@ step "Upload Microsite to AWS S3" {
             Octopus.Action.AwsAccount.UseInstanceRole = "False"
             Octopus.Action.AwsAccount.Variable = "AWS.Account"
             Octopus.Action.Package.DownloadOnTentacle = "False"
-            Octopus.Action.Package.FeedId = "builtinrepository"
+            Octopus.Action.Package.FeedId = "Octopus Server (built-in)"
             Octopus.Action.Package.PackageId = "DevOpsMicrosite"
             Octopus.Action.RunOnServer = "true"
         }
