@@ -19,6 +19,12 @@ Use `#secops-requests` to request access to the AWS "product team" account.
 3. Octopus auto-deploys to staging and removes unnecessary files (`LICENSE` and `README.md`)
 4. Push-button deployment to production (also removes unnecessary files)
 
+## Analytics
+
+One of our recommendations is that you should use the same artifact for all environments. For this reason, we don't use Jekyll environments to decide whether to add analytics, but have implemented an inline check so they only run on `octopus.com` (analytics does _not_ run on the AWS addresses or on `preprod.octopus.com`).
+
+See `analytics.html`.
+
 ## Running Jekyll on Windows
 
  - Install languages
