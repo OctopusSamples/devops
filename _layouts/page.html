@@ -14,7 +14,7 @@ layout: default
 	<nav aria-label="Breadcrumb" class="breadcrumbs">
 		<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="/" href="{{ site.url }}">
+				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="/" href="/">
 					<span itemprop="name">DevOps</span>
 				</a>
 				<meta itemprop="position" content="{{bc-position}}" />
@@ -23,7 +23,7 @@ layout: default
   			{% if breadcrumb-topic.size > 1 %}
   			{% assign bc-position = bc-position | plus:1 %}
   			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="/{{breadcrumb-topic}}" href="{{ site.url }}/{{breadcrumb-topic}}">
+  				<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="/{{breadcrumb-topic}}" href="/{{breadcrumb-topic}}">
   					<span itemprop="name">{{ breadcrumb-topic | replace: "-", " " | capitalize }}</span>
   				</a>
   				<meta itemprop="position" content="{{bc-position}}" />
