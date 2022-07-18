@@ -17,7 +17,7 @@ step "Upload Microsite to AWS S3" {
             Octopus.Action.Package.PackageId = "DevOpsMicrosite"
             Octopus.Action.RunOnServer = "true"
         }
-        worker_pool = "Hosted Windows"
+        worker_pool = "Hosted Ubuntu"
 
         packages {
             acquisition_location = "Server"
@@ -40,6 +40,7 @@ step "Remove Files" {
             Octopus.Action.Aws.Region = "#{AWS.Region}"
             Octopus.Action.AwsAccount.UseInstanceRole = "False"
             Octopus.Action.AwsAccount.Variable = "AWS.Account"
+            Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = <<-EOT
                 aws s3api delete-object --bucket $(get_octopusvariable "AWS.BucketName") --key LICENSE
                 aws s3api delete-object --bucket $(get_octopusvariable "AWS.BucketName") --key README.md
@@ -48,6 +49,6 @@ step "Remove Files" {
             Octopus.Action.Script.Syntax = "Bash"
             OctopusUseBundledTooling = "False"
         }
-        worker_pool_variable = ""
+        worker_pool = "Hosted Ubuntu"
     }
 }
