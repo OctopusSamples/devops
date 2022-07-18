@@ -42,8 +42,18 @@ step "Remove Files" {
             Octopus.Action.AwsAccount.Variable = "AWS.Account"
             Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = <<-EOT
-                aws s3api delete-object --bucket $(get_octopusvariable "AWS.BucketName") --key LICENSE
-                aws s3api delete-object --bucket $(get_octopusvariable "AWS.BucketName") --key README.md
+                # Get the containers
+                echo "Downloading Docker images"
+                echo "##octopus[stdout-verbose]"
+                docker pull amazon/aws-cli 2>&1
+                echo "##octopus[stdout-default]"
+                
+                # Alias the docker run commands
+                shopt -s expand_aliases
+                alias aws="docker run --rm -i -v $(pwd):/build -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY amazon/aws-cli"
+                
+                aws s3api delete-object --bucket #{AWS.BucketName} --key LICENSE
+                aws s3api delete-object --bucket #{AWS.BucketName} --key README.md
             EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
