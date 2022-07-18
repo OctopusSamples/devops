@@ -16,8 +16,8 @@ Use `#secops-requests` to request access to the AWS "product team" account.
 
 1. Commit to GitHub
 2. GitHub action builds Jekyll site and uploads zip file to Octopus
-3. Octopus auto-deploys to staging
-4. Push-buton deployment to production
+3. Octopus auto-deploys to staging and removes unnecessary files (`LICENSE` and `README.md`)
+4. Push-button deployment to production (also removes unnecessary files)
 
 ## Running Jekyll on Windows
 
