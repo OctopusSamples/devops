@@ -5,6 +5,7 @@ date: 2022-07-20
 order: 100
 permalink: /continuous-delivery/
 category: DevOps
+tags: cd,continuous delivery
 search: true
 sitemap: true
 ---

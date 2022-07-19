@@ -36,6 +36,25 @@ One of our recommendations is that you should use the same artifact for all envi
 
 See `analytics.html`.
 
+## Search and sitemap
+
+The search and sitemap include pages based on a flag in the header YAML.
+
+A page is included in search if `search: true`. Search uses title and tags.
+
+For sitemaps, pages are included if `sitemap: true` and you need to ensure the date is supplied. The date should reflect *the last meaningful update*.
+
+```
+---
+search: true
+title: What is continuous delivery
+tags: cd,continuous delivery
+
+sitemap: true
+date: 2022-07-20
+---
+```
+
 ## Running Jekyll on Windows
 
  - Install languages
