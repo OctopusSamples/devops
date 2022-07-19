@@ -1,4 +1,5 @@
-step "Upload Microsite to AWS S3" {
+step "upload-microsite-to-aws-s3" {
+    name = "Upload Microsite to AWS S3"
 
     action {
         action_type = "Octopus.AwsUploadS3"
@@ -13,15 +14,15 @@ step "Upload Microsite to AWS S3" {
             Octopus.Action.AwsAccount.UseInstanceRole = "False"
             Octopus.Action.AwsAccount.Variable = "AWS.Account"
             Octopus.Action.Package.DownloadOnTentacle = "False"
-            Octopus.Action.Package.FeedId = "Octopus Server (built-in)"
+            Octopus.Action.Package.FeedId = "octopus-server-built-in"
             Octopus.Action.Package.PackageId = "DevOpsMicrosite"
             Octopus.Action.RunOnServer = "true"
         }
-        worker_pool = "Hosted Ubuntu"
+        worker_pool = "hosted-ubuntu"
 
         packages {
             acquisition_location = "Server"
-            feed = "Octopus Server (built-in)"
+            feed = "octopus-server-built-in"
             package_id = "DevOpsMicrosite"
             properties = {
                 SelectionMode = "immediate"
@@ -30,7 +31,8 @@ step "Upload Microsite to AWS S3" {
     }
 }
 
-step "Remove Files" {
+step "remove-files" {
+    name = "Remove Files"
 
     action {
         action_type = "Octopus.AwsRunScript"
@@ -59,6 +61,6 @@ step "Remove Files" {
             Octopus.Action.Script.Syntax = "Bash"
             OctopusUseBundledTooling = "False"
         }
-        worker_pool = "Hosted Ubuntu"
+        worker_pool = "hosted-ubuntu"
     }
 }
