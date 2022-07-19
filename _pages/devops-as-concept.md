@@ -1,9 +1,12 @@
 ---
 layout: page
 title: DevOps as a concept
+date: 2022-07-20
 order: 20
 permalink: /devops-as-a-concept/
 category: DevOps
+search: true
+sitemap: true
 ---
 
 ![image](/assets/img/blogimage-cloudformationmappings-2022.png)

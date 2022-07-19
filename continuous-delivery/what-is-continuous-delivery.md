@@ -1,10 +1,12 @@
 ---
 layout: page
 title: What is continuous delivery
-search: true
+date: 2022-07-20
 order: 110
 category: Continuous delivery
 description: 
+search: true
+sitemap: true
 ---
 
 

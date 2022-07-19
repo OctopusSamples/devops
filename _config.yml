@@ -8,7 +8,7 @@ url: "https://octopus.com" # the base hostname & protocol for your site, e.g. ht
 markdown: kramdown
 
 include: [_pages]
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+exclude: ["node_modules", "package.json", "package-lock.json", "yarn.lock"]
 
 collections:
   continuous-delivery:

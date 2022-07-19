@@ -1,9 +1,12 @@
 ---
 layout: page
 title: Continuous delivery
+date: 2022-07-20
 order: 100
 permalink: /continuous-delivery/
 category: DevOps
+search: true
+sitemap: true
 ---
 
 ![image](/assets/img/blogimage-cloudformationmappings-2022.png)

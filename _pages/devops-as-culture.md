@@ -1,9 +1,12 @@
 ---
 layout: page
 title: DevOps as a culture
+date: 2022-07-20
 order: 30
 permalink: /devops-as-a-culture/
 category: DevOps
+search: true
+sitemap: true
 ---
 
 In traditional organizations, developers and those that support them (such as operations or database teams) are often separate entities with little interaction.
