@@ -5,8 +5,19 @@
 - Version control: https://github.com/OctopusSamples/devops
 - Octopus Deploy: https://tenpillars.octopus.app/app#/Spaces-128
 - AWS "product team" #133577413914 (productteamawsaccount@octopus.com)
+- AWS CloudFront provides TLS https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/
+
+### Staging
+
 - AWS staging: http://octopus-devops-staging.s3-website-us-east-1.amazonaws.com/
+- AWS staging CloudFront: https://d2p1p7fkxn3yvz.cloudfront.net
+
+### Production
+
 - AWS production: http://octopus-devops-production.s3-website-us-east-1.amazonaws.com/
+- AWS production CloudFront: https://d3c69uquauzbr0.cloudfront.net
+
+### GitHub and Octopus
 
 The content team can provide access to GitHub and Octopus Deploy.
 
