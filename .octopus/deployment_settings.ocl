@@ -5,6 +5,6 @@ connectivity_policy {
 versioning_strategy {
 
     donor_package {
-        step = "Upload Microsite to AWS S3"
+        step = "upload-microsite-to-aws-s3"
     }
 }

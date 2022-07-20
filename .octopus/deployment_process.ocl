@@ -1,4 +1,5 @@
-step "Upload Microsite to AWS S3" {
+step "upload-microsite-to-aws-s3" {
+    name = "Upload Microsite to AWS S3"
 
     action {
         action_type = "Octopus.AwsUploadS3"
@@ -13,52 +14,19 @@ step "Upload Microsite to AWS S3" {
             Octopus.Action.AwsAccount.UseInstanceRole = "False"
             Octopus.Action.AwsAccount.Variable = "AWS.Account"
             Octopus.Action.Package.DownloadOnTentacle = "False"
-            Octopus.Action.Package.FeedId = "Octopus Server (built-in)"
+            Octopus.Action.Package.FeedId = "octopus-server-built-in"
             Octopus.Action.Package.PackageId = "DevOpsMicrosite"
             Octopus.Action.RunOnServer = "true"
         }
-        worker_pool = "Hosted Ubuntu"
+        worker_pool = "hosted-ubuntu"
 
         packages {
             acquisition_location = "Server"
-            feed = "Octopus Server (built-in)"
+            feed = "octopus-server-built-in"
             package_id = "DevOpsMicrosite"
             properties = {
                 SelectionMode = "immediate"
             }
         }
-    }
-}
-
-step "Remove Files" {
-
-    action {
-        action_type = "Octopus.AwsRunScript"
-        is_required = true
-        properties = {
-            Octopus.Action.Aws.AssumeRole = "False"
-            Octopus.Action.Aws.Region = "#{AWS.Region}"
-            Octopus.Action.AwsAccount.UseInstanceRole = "False"
-            Octopus.Action.AwsAccount.Variable = "AWS.Account"
-            Octopus.Action.RunOnServer = "true"
-            Octopus.Action.Script.ScriptBody = <<-EOT
-                # Get the containers
-                echo "Downloading Docker images"
-                echo "##octopus[stdout-verbose]"
-                docker pull amazon/aws-cli 2>&1
-                echo "##octopus[stdout-default]"
-                
-                # Alias the docker run commands
-                shopt -s expand_aliases
-                alias aws="docker run --rm -i -v $(pwd):/build -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY amazon/aws-cli"
-                
-                aws s3api delete-object --bucket #{AWS.BucketName} --key LICENSE
-                aws s3api delete-object --bucket #{AWS.BucketName} --key README.md
-            EOT
-            Octopus.Action.Script.ScriptSource = "Inline"
-            Octopus.Action.Script.Syntax = "Bash"
-            OctopusUseBundledTooling = "False"
-        }
-        worker_pool = "Hosted Ubuntu"
     }
 }
