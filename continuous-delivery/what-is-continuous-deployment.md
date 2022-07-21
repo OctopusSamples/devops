@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Continuous Delivery
+title: What is continuous deployment
 date: 2022-07-20
-order: 2000
-permalink: /continuous-delivery/
-category: DevOps
-tags: ci/cd,cd,continuous delivery
+order: 1000
+category: Continuous Delivery
+description: 
 search: true
 sitemap: true
 ---

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Continuous Delivery
+title: The difference between deployments and releases
 date: 2022-07-20
-order: 2000
-permalink: /continuous-delivery/
-category: DevOps
-tags: ci/cd,cd,continuous delivery
+order: 7000
+category: Continuous Delivery
+description: 
 search: true
 sitemap: true
 ---

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Continuous Delivery
+title: Why should you adopt continuous delivery?
 date: 2022-07-20
 order: 2000
-permalink: /continuous-delivery/
-category: DevOps
-tags: ci/cd,cd,continuous delivery
+category: Continuous Delivery
+description: 
 search: true
 sitemap: true
 ---
