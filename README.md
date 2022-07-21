@@ -2,13 +2,7 @@
 
 ## Running locally
 
-We have a special local configuration file, so run locally with:
-
-     jekyll serve --config _config_dev.yml
-
-_config_dev.yml severs all the files and assets from the root (/).
-
-_config.yml is set up to be aware of the /devops subfolder.
+When you run locally, you need to browse to: http://127.0.0.1:4000/devops/ (i.e. with `/devops/` on the end).
 
 ## Where everything is
 

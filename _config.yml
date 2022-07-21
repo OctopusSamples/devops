@@ -2,6 +2,7 @@ title: Octopus DevOps
 description: > # this means to ignore newlines until "baseurl:"
 permalink: ':title/'
 baseurl: "/devops" # the subpath of your site, e.g. /blog
+destination: _site/devops
 url: "https://octopus.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings

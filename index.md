@@ -4,7 +4,7 @@ title: DevOps
 description: DevOps! DevOps! DevOps!
 ---
 
-![image of a blueprint](/assets/img/blueprint.png)
+![image of a blueprint](/devops/assets/img/blueprint.png)
 
 Skip to the [sample content](#sample-content).
 
@@ -109,24 +109,24 @@ Write-Host "Hello, World!"
 
 ## Images
 
-![image of a globe](/assets/img/blogimage-cloudformationmappings-2022.png)
+![image of a globe](/devops/assets/img/blogimage-cloudformationmappings-2022.png)
 
 In order to provide additional style for images it's necessary to use html. For instance, the following code produces the following image:
 
 ```
 <div class="img-left">
-<img src="/assets/img/narrow-blogimage-cloudformationmappings-2022.png" alt="image of a globe">
+<img src="/devops/assets/img/narrow-blogimage-cloudformationmappings-2022.png" alt="image of a globe">
 </div>
 ```
 
 <div class="img-left">
-<img src="/assets/img/narrow-blogimage-cloudformationmappings-2022.png" alt="image of a globe">
+<img src="/devops/assets/img/narrow-blogimage-cloudformationmappings-2022.png" alt="image of a globe">
 </div>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat pretium nibh ipsum consequat nisl. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Amet facilisis magna etiam tempor orci eu. Sit amet cursus sit amet dictum sit. Senectus et netus et malesuada. Pellentesque massa placerat duis ultricies lacus sed turpis. Ullamcorper morbi tincidunt ornare massa eget egestas. Tellus mauris a diam maecenas sed enim ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Libero nunc consequat interdum varius sit amet. Sed libero enim sed faucibus turpis in eu mi. Pellentesque sit amet porttitor eget. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Purus semper eget duis at tellus at urna. In fermentum posuere urna nec tincidunt praesent. Pellentesque nec nam aliquam sem. Tincidunt lobortis feugiat vivamus at augue eget.
 
 <div class="img-right">
-<img src="/assets/img/narrow-blogimage-cloudformationmappings-2022.png" alt="image of a globe">
+<img src="/devops/assets/img/narrow-blogimage-cloudformationmappings-2022.png" alt="image of a globe">
 </div>
 
 At quis risus sed vulputate odio. Mattis pellentesque id nibh tortor id aliquet. Sed cras ornare arcu dui vivamus arcu. Risus at ultrices mi tempus imperdiet. Nunc sed velit dignissim sodales ut eu sem. Auctor urna nunc id cursus metus. Cras sed felis eget velit aliquet sagittis id consectetur purus. Lectus sit amet est placerat in. Augue eget arcu dictum varius duis at consectetur lorem. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Non consectetur a erat nam at. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque.
