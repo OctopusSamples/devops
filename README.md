@@ -10,12 +10,12 @@
 ### Staging
 
 - AWS staging: http://octopus-devops-staging.s3-website-us-east-1.amazonaws.com/
-- AWS staging CloudFront: https://d2p1p7fkxn3yvz.cloudfront.net
+- AWS staging CloudFront: https://d2p1p7fkxn3yvz.cloudfront.net/devops/
 
 ### Production
 
 - AWS production: http://octopus-devops-production.s3-website-us-east-1.amazonaws.com/
-- AWS production CloudFront: https://d3c69uquauzbr0.cloudfront.net
+- AWS production CloudFront: https://d3c69uquauzbr0.cloudfront.net/devops/
 
 ### GitHub and Octopus
 
