@@ -10,7 +10,7 @@ search: true
 sitemap: true
 ---
 
-![image](/assets/img/blogimage-cloudformationmappings-2022.png)
+![image](/devops/assets/img/blogimage-cloudformationmappings-2022.png)
 
 In modern development, it's more important than ever to deliver software and updates as quickly and reliably as possible.
 

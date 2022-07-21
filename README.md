@@ -1,9 +1,5 @@
 # Octopus DevOps
 
-## Running locally
-
-When you run locally, you need to browse to: http://127.0.0.1:4000/devops/ (i.e. with `/devops/` on the end).
-
 ## Where everything is
 
 - Version control: https://github.com/OctopusSamples/devops
@@ -69,10 +65,7 @@ date: 2022-07-20
 
 To run Jekyll on Windows, you need to install the following:
 
- - [Python 2.7](https://www.python.org/downloads/release/python-2718/)
- - [Ruby with DevKit](https://rubyinstaller.org/downloads/)
-
-Note that Python 2 is required because of one of the NPM packages. There is a "Windows x86-64 MSI installer" option.
+  - [Ruby with DevKit](https://rubyinstaller.org/downloads/)
 
 Note that Ruby should be installed **with DevKit** for Ruby Gems to install. The download is an EXE that installs Ruby.
 
@@ -104,5 +97,7 @@ Then run the site using:
 
 The command will output the address of the server, which you can open in your browser:
 
-    Server address: http://127.0.0.1:4000/
+    Server address: http://127.0.0.1:4000/devops/
     Server running... press ctrl-c to stop.
+
+Note: as we are running in live in a subfolder, the local version has also been set up to run in a subfolder, so please ensure you browse to `/devops/` locally.
